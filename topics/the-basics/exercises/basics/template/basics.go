@@ -6,15 +6,21 @@
 package main
 
 // Add your imports here.
+import "fmt"
 
 // Declare a struct type `person` to maintain information about a person.
+type person struct {
+    name string
+    age int
+}
 
 // Declare a function that creates new values of your `person` type.
-func funcName( /* args */ ) /* return type */ {
+func makePerson(name string, age int) person {
+    return person{name, age}
 }
 
 func main() {
-	// Use you function to create a new value of type `person`.
-
-	// Output the value of your person.
+    p1 := makePerson("Mike", 10)
+    fmt.Printf("%s is %d\n", p1.name, p1.age)
+    fmt.Println(p1)
 }
